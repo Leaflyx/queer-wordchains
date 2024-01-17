@@ -6,14 +6,27 @@ module.exports = {
   ],
   theme: {
     extend: {
+      borderWidth: {
+        xs: '1px'
+      },
       colors: {
-        background: "hsl(var(--background))",
+        background: "#fff0f3",
         foreground: "hsl(var(--foreground))",
         btn: {
           background: "hsl(var(--btn-background))",
           "background-hover": "hsl(var(--btn-background-hover))",
         },
       },
+      fontFamily: {
+        fBody: ['var(--font-shantellSans)']
+      },
+      textColor: {
+        primary: '#2F4858',
+        link: '#000000'
+      },
+      borderColor: {
+        primary: '#B0A6B4'
+      }
     },
   },
   plugins: [],

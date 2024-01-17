@@ -1,5 +1,5 @@
-import { GeistSans } from "geist/font/sans";
 import "./globals.css";
+import { Shantell_Sans } from 'next/font/google'
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -11,13 +11,18 @@ export const metadata = {
   description: "The fastest way to build apps with Next.js and Supabase",
 };
 
+const shantellSans = Shantell_Sans({
+  subsets: ['latin'],
+  variable: '--font-shantellSans'
+})
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={GeistSans.className}>
+    <html lang="en" className={shantellSans.className}>
       <body className="bg-background text-foreground">
         <main className="min-h-screen flex flex-col items-center">
           {children}
